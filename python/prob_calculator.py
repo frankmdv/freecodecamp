@@ -6,7 +6,7 @@ class Hat:
     def __init__(self, **kwargs):
         self.contents = []
         for ball, num in kwargs.items():
-            self.contents.extend([ball for _ in range(num)])
+            self.contents.extend([ball] * num)
 
     def draw(self, num_balls):
         if num_balls > len(self.contents):
